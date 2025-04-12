@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident Management Form</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      max-width: 700px;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #003366;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #0055a5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003f7d;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h2>INCIDENT MANAGEMENT FORM</h2>
+    <p>This form is designed to report incidents related to workplace equipment. All submissions will be reviewed promptly.</p>
+
+    <form action="#" method="post">
+      <!-- New Personal Info Section -->
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" name="full_name" required>
+
+      <label for="job-title">Job Title</label>
+      <input type="text" id="job-title" name="job_title" required>
+
+      <label for="department">Department</label>
+      <input type="text" id="department" name="department" required>
+
+      <label for="contact-info">Contact Information</label>
+      <input type="text" id="contact-info" name="contact_info" placeholder="Phone or email" required>
+
+      <!-- Original Incident Section -->
+      <label for="incident-date">Date of Incident</label>
+      <input type="date" id="incident-date" name="incident_date" required>
+
+      <label for="incident-time">Time of Incident</label>
+      <input type="time" id="incident-time" name="incident_time" required>
+
+      <label for="location">Location of Incident</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="incident-type">Type of Incident</label>
+      <select id="incident-type" name="incident_type" required>
+        <option value="">--Select--</option>
+        <option value="Equipment Malfunction">Equipment Malfunction</option>
+        <option value="Electrical Disruption">Electrical Disruption</option>
+        <option value="Defective Working Tools">Defective Working Tools</option>
+        <option value="Power Failure">Power Failure</option>
+		<option value="Fire Outbreak">Fire Outbreak</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="description">Incident Description</label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+
+      <label for="witnesses">Witnesses (if any)</label>
+      <input type="text" id="witnesses" name="witnesses">
+
+      <label for="reported-by">Reported By</label>
+      <input type="text" id="reported-by" name="reported_by" required>
+
+      <label for="actions-taken">Immediate Actions Taken</label>
+      <textarea id="actions-taken" name="actions_taken" rows="4"></textarea>
+
+     <label for="Incident-Severity">Severity of Incident</label>
+      <select id="Incident-Severity" name="incident_Severity" required>
+        <option value="">--Select--</option>
+        <option value="Low (Minor issue, no injury)">Low (Minor issue, no injury)</option>
+        <option value="Medium (Some impact, minor injury)">Medium (Some impact, minor injury)</option>
+        <option value="High (Major injury or disruption)">High (Major injury or disruption)</option>
+        <option value="Critical (Severe injury/fatality or major disruption)">Critical (Severe injury/fatality or major disruption)</option>
+      </select>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+</body>
+</html>
